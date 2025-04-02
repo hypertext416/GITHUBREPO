@@ -16,19 +16,19 @@ GROUP BY department
 HAVING COUNT (department) >= 3;
 
 
-create table vitBhopal (id int primary key, name varchar(20) not null,
+create table VITBhopal (id int primary key, name varchar(20) not null,
   departement varchar(25) not null);
-insert into vitBhopal values(104,'Shubham','cs'),(103,'Anjali','BEd');
+insert into VITBhopal values(104,'Shubham','cs'),(103,'Anjali','BEd');
 
-create table vit (id int primary key, name varchar(20) not null,
+create table VIT (id int primary key, name varchar(20) not null,
   departement varchar(25) not null);
-insert into vit values(104,'Shubham','Samastipur'),(103,'Anjali','Vidyapati');
+insert into VIT values(104,'Shubham','Samastipur'),(103,'Anjali','Vidyapati');
 
-select * from vit;
-select * from vitBhopal;
+select * from VIT;
+select * from VITBhopal;
 
-select name as WinnerOfTheYear from vitBhopal 
-  where id = (select id from vit where college = 'bhopal');
+select name as WinnerOfTheYear from VITBhopal 
+  where id = (select id from VIT where college = 'bhopal');
 
 
 
