@@ -20,7 +20,7 @@ public class JDBC{
   
       }
     catch(Exception e){
-      System.out.println("Shubham check your program, there is a small error");
+      System.out.println("Error detected , program rejected");
     }
   }
 }
